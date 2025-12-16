@@ -2,15 +2,15 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "ES2022",
+    "lib": ["ES2022"],
+    "rootDir": "./src",
     "module": "ESNext",
+    "moduleResolution": "Node",
     "paths": {
       "@/api/*": ["./src/*"]
     },
-    "lib": ["ES2022"],
-    "moduleResolution": "Node",
-    "outDir": "./dist",
-    "rootDir": "./src",
     "resolveJsonModule": true,
+    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },

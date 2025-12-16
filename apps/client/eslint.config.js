@@ -1,25 +1,21 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
-import createConfig from '@typerx/eslint-config'
+import pluginQuery from "@tanstack/eslint-plugin-query";
+import createConfig from "@typerx/eslint-config/create-config";
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  createConfig(
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-  })
-])
+export default createConfig({
+  react: true,
+}, {
+  plugins: {
+    "@tanstack/query": pluginQuery,
+  },
+  rules: {
+    "antfu/top-level-function": "off",
+    "@tanstack/query/exhaustive-deps": "error",
+    "unicorn/filename-case": ["error", {
+      cases: {
+        camelCase: true,
+        pascalCase: true,
+      },
+      ignore: ["README.md", "~__root.tsx"],
+    }],
+  },
+});
