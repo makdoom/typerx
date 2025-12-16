@@ -10,6 +10,7 @@
       "outputs": ["dist/**"]
     },
     "lint": {},
-    "lint:fix": {}
+    "lint:fix": {},
+    "lint-staged":{}
   }
 }
