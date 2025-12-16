@@ -1,0 +1,14 @@
+{
+  "name": "typerx",
+  "version": "1.0.0",
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  }
+}
