@@ -23,7 +23,7 @@ export default function createConfig(options, ...userConfigs) {
       }],
       "unicorn/filename-case": ["error", {
         case: "kebabCase",
-        ignore: ["README.md"],
+        ignore: ["README.md", "migration_lock.toml"],
       }],
     },
   }, ...userConfigs);
