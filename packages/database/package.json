@@ -1,0 +1,27 @@
+{
+  "name": "@typerx/db",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.22.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "@typerx/eslint-config": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.16.0",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.39.2",
+    "prisma": "^7.2.0"
+  }
+}
